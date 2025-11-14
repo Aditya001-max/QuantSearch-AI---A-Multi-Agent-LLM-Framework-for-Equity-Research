@@ -221,3 +221,60 @@ CS787 '<real-number>'
 
 Where `<real-number>` ∈ **(-1, 1)** and is **never 0**.
 
+## How to Run:
+
+1) git clone https://github.com/unordinarysubstance/CS787
+2) Install `uv`
+```bash
+pip install uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+3) Verify:
+```bash
+uv --version
+```
+4) Install Python 3.13
+```bash
+brew install python@3.13
+```
+5) Link:
+```bash
+brew link --overwrite python@3.13
+```
+6) Verify:
+```bash
+python3.13 --version
+```
+7) Go inside the project
+8) Create Virtual Environment + Install Dependencies 
+```bash
+uv sync --python python3.13
+```
+9) Activate environment (optional):
+```bash
+source .venv/bin/activate
+```
+10) Add API key:
+```bash
+echo "OPENAI_API_KEY=your_openai_api_key" >> .env
+```
+11) Verify:
+```bash
+cat .env
+```
+12) Install Missing Runtime Packages
+```bash
+uv pip install tavily-python
+uv pip install crewai
+uv pip install langchain_community
+```
+13) Place research reports inside:
+assets/rag_assets/
+from company_assets/<ticker>/<ticker>.pdf
+14) Run AlphaAgent by this command:
+```bash
+uv run --python python3.13 python main.py --stock RELIANCE.NS --pdf assets/rag_assets/RELIANCE.NS.pdf
+```
+This is for RELIANCE.NS, for e.g.
+
+15) The output is as shown:
