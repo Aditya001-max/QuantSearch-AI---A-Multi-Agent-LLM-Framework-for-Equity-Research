@@ -223,8 +223,11 @@ Where `<real-number>` ∈ **(-1, 1)** and is **never 0**.
 
 ## How to Run (in macOS):
 
-1) git clone https://github.com/unordinarysubstance/CS787
-2) Install `uv`
+1) Clone the repo:
+```bash
+git clone https://github.com/unordinarysubstance/CS787
+```
+3) Install `uv`
 ```bash
 pip install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
