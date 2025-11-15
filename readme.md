@@ -8,11 +8,11 @@ This framework integrates **Semantic RAG**, **fundamental analysis**, **valuatio
 
 ---
 # Team Members
-1) 
+1) Aamir Ahmad (230010)
 2) Aaryan Maheshwari (230022)
 3) Aviral Gupta (230246)
-4) 
-5) 
+4) Pallav Rastogi (230731)
+5) Suyash Kapoor (231066)
 
 ---
 
