@@ -7,6 +7,14 @@ This framework integrates **Semantic RAG**, **fundamental analysis**, **valuatio
 📄 Paper: https://arxiv.org/abs/2508.11152
 
 ---
+# Team Members
+1) 
+2) Aaryan Maheshwari (230022)
+3) Aviral Gupta (230246)
+4) 
+5) 
+
+---
 
 # 🚀 How This Implementation Extends the Original AlphaAgents Paper
 
