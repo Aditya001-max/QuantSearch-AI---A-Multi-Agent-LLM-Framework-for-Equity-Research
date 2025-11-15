@@ -50,7 +50,6 @@ Computes:
 - Weighted confidence score  
 - Final BUY/SELL  
 - Outputs strict 2-word final signal `CS787 <score>`
-
 ---
 
 ### ✅ 2. Stronger Debate System: Multi-Turn, Structured, Weighted Voting  
