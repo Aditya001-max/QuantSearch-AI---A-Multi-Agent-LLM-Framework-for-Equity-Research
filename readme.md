@@ -50,6 +50,7 @@ Computes:
 - Weighted confidence score  
 - Final BUY/SELL  
 - Outputs strict 2-word final signal `CS787 <score>`
+
 ---
 
 ### ✅ 2. Stronger Debate System: Multi-Turn, Structured, Weighted Voting  
@@ -230,11 +231,11 @@ Where `<real-number>` ∈ **(-1, 1)** and is **never 0**.
 
 ## How to Run (in macOS):
 
-1) Clone the repo:
+1) Clone the repository
 ```bash
 git clone https://github.com/unordinarysubstance/CS787
 ```
-3) Install `uv`
+2) Install `uv`
 ```bash
 pip install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
@@ -282,11 +283,92 @@ uv pip install langchain_community
 from: `company_assets/RELIANCE.NS/RELIANCE.NS.pdf`
 (this is for example - RELIANCE.NS)
 
-15) Run AlphaAgent by this command:
+14) Run AlphaAgent by this command:
 ```bash
-uv run --python python3.13 python main.py --stock RELIANCE.NS --pdf assets/rag_assets/RELIANCE.NS.pdf
+uv run python main.py --stock RELIANCE.NS --pdf assets/rag_assets/RELIANCE.NS.pdf
 ```
 This is for RELIANCE.NS, for e.g.
 
-15) The output is as shown:
-    ![Logo](image.png)
+## How to run (in Windows):
+
+1) Clone the repository
+```bash
+git clone https://github.com/unordinarysubstance/CS787
+```
+2) Install `uv`
+```bash
+irm https://astral.sh/uv/install.ps1 | iex
+```
+Add this to your path manually `%USERPROFILE%\.local\bin`
+
+3) Verify:
+```bash
+uv --version
+```
+4) Install Python 3.13
+```bash
+uv install python@3.13
+```
+5) Verify:
+```bash
+python3.13 --version
+```
+6) Go inside the project
+7) Create Virtual Environment + Install Dependencies 
+```bash
+uv sync --python python3.13
+```
+8) Create Virtual Environment + Install Dependencies 
+```bash
+uv sync --python python3.13
+```
+9) Activate environment (optional):
+```bash
+.venv\Scripts\activate
+```
+10) Add API key:
+```bash
+echo "OPENAI_API_KEY=your_openai_api_key" >> .env
+```
+11) Verify:
+```bash
+cat .env
+```
+12) Install Missing Runtime Packages
+```bash
+uv pip install tavily-python
+uv pip install crewai
+uv pip install langchain_community
+```
+13) Place research reports inside: `assets/rag_assets/`  
+from: `company_assets/RELIANCE.NS/RELIANCE.NS.pdf`
+(this is for example - RELIANCE.NS)
+
+14) Run AlphaAgent by this command:
+```bash
+uv run python main.py --stock RELIANCE.NS --pdf assets/rag_assets/RELIANCE.NS.pdf
+```
+This is for RELIANCE.NS, for e.g.
+
+## Output
+The output is as shown:
+    ![Logo](documents/image.png)
+
+## How to Run website on the device:
+
+1) Get inside the repository
+2) Activate environment (optional):
+```bash
+source .venv/bin/activate
+```
+3) Install uvicorn
+```bash
+pip install uvicorn
+```
+4) Run the command:
+```bash
+uvicorn app:app --reload --host 127.0.0.1 --port 8000
+```
+5) Now the backend is up, can use index.html.
+6) Final output in website for BAJFINANCE.NS:
+    ![Logo](documents/web_image.png)
