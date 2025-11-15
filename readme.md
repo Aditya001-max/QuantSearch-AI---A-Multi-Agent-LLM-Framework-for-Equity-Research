@@ -217,7 +217,7 @@ Sequential execution:
 
 The Conclusion Agent outputs exactly:
 
-CS787 '<real-number>'
+CS787 `<real-number>`
 
 Where `<real-number>` ∈ **(-1, 1)** and is **never 0**.
 
