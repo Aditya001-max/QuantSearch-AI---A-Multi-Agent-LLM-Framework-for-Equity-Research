@@ -715,7 +715,7 @@ Additional issues identified during this documentation pass (**not yet fixed in 
 ### 20.2 Environment setup (Windows, from `readme.md`)
 ```powershell
 # 1. Clone
-git clone https://github.com/Aditya001-max/CS787
+git clone https://github.com/Aditya001-max/QuantSearch-AI---A-Multi-Agent-LLM-Framework-for-Equity-Research.git
 
 # 2. Install uv
 irm https://astral.sh/uv/install.ps1 | iex   # then add %USERPROFILE%\.local\bin to PATH

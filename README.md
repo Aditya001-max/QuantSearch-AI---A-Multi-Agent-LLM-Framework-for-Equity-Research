@@ -144,8 +144,8 @@ $$\text{Confidence Score } S \in (-1.0, 1.0), \quad S \neq 0.0$$
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/Aditya001-max/CS787.git
-cd CS787
+git clone https://github.com/Aditya001-max/QuantSearch-AI---A-Multi-Agent-LLM-Framework-for-Equity-Research.git
+cd QuantSearch-AI---A-Multi-Agent-LLM-Framework-for-Equity-Research
 ```
 
 ### 2. Set Up Virtual Environment & Dependencies
