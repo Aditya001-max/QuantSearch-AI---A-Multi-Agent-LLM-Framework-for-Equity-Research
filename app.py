@@ -1,6 +1,6 @@
 from fastapi import FastAPI, File, UploadFile, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import JSONResponse, StreamingResponse
+from fastapi.responses import JSONResponse, StreamingResponse, FileResponse
 from pydantic import BaseModel
 from typing import Optional, Dict, Any
 import os
@@ -41,7 +41,14 @@ class AnalysisStatus(BaseModel):
 
 @app.get("/")
 async def root():
+    index_file = Path(__file__).parent / "index.html"
+    if index_file.exists():
+        return FileResponse(index_file)
     return {"message": "AlphaAgent API is running", "version": "1.0.0"}
+
+@app.get("/api/health")
+async def health_check():
+    return {"status": "healthy", "service": "AlphaAgent API", "version": "1.0.0"}
 
 @app.post("/api/upload-document")
 async def upload_document(file: UploadFile = File(...)):

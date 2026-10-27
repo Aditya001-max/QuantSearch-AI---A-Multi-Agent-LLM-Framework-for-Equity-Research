@@ -44,7 +44,9 @@ def main():
             sys.exit(1)
 
         filename = "uploadedfile_note.pdf"
-        filepath = os.path.join("assets/rag_assets", filename)
+        target_dir = os.path.join("assets", "rag_assets")
+        os.makedirs(target_dir, exist_ok=True)
+        filepath = os.path.join(target_dir, filename)
 
         with open(args.pdf, "rb") as f_in, open(filepath, "wb") as f_out:
             f_out.write(f_in.read())

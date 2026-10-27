@@ -545,7 +545,9 @@
     <div id="toast" class="toast"></div>
 
     <script>
-        const API_URL = 'http://localhost:8000';
+        const API_URL = (window.location.origin && window.location.origin.startsWith('http')) 
+            ? window.location.origin 
+            : 'http://localhost:8000';
 
         let currentJobId = null;
         let eventSource = null;
